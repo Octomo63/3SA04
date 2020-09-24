@@ -1,7 +1,10 @@
 import React, { useState , useEffect} from 'react';
 import { View, Text, ImageBackground, StyleSheet } from 'react-native';
 import Forecast from './Forecast';
+
 const apiKey = '6cecb9dd2e369d7e9b5d62bc682150d4'
+
+
 export default function Weather(props) {
     const [forecastInfo, setForecastInfo] = useState({
         main: '-',
