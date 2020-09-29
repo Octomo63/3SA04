@@ -13,7 +13,20 @@ export default function Forecast(props) {
                     <Text style={styles.medium}>°C</Text>
                 </Text>
             </View>
-            <Text style={styles.big}>Wind {props.wind} Meter/Sec</Text>
+            <View style={{marginTop: 20}}>
+                <Text>
+                    <Text style={styles.medium}>Wind</Text>
+                    <Text style={styles.wind}> {props.wind} </Text>
+                    <Text style={styles.medium}>Meter/Sec</Text>
+                </Text>
+            </View>
+            <View style={{marginTop: 20}}>
+                <Text>
+                    <Text style={styles.medium}>Wind Direction</Text>
+                    <Text style={styles.wind}> {props.winddeg} </Text>
+                    <Text style={styles.medium}>Degrees</Text>
+                </Text>
+            </View>
         </View>
     );
 }
@@ -30,6 +43,11 @@ const styles = StyleSheet.create({
     medium: {
         marginTop: 20,
         fontSize: 15,
+        color: 'white',
+    },
+    wind:{
+        marginTop: 20,
+        fontSize: 25,
         color: 'white',
     }
 })

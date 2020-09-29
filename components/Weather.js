@@ -11,6 +11,7 @@ export default function Weather(props) {
         description: '-',
         temp: 0,
         wind: 0,
+        winddeg: 0,
     })
     useEffect(() => {
         console.log(`fetching data with zipCode = ${props.zipCode}`)
@@ -23,6 +24,7 @@ export default function Weather(props) {
             description: json.weather[0].description,
             temp: json.main.temp,
             wind: json.wind.speed,
+            winddeg: json.wind.deg,
             });
         })
         .catch((error) => {
@@ -31,8 +33,8 @@ export default function Weather(props) {
         }
     }, [props.zipCode])
     return (
-        <View style={styles.Fullscreen}>
-            <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
+        <View >
+            <ImageBackground source={require('../bg.gif')} style={styles.backdrop}>
                 <View style={styles.box}>
                     <Text style={styles.medium}>Zip Code {props.zipCode}</Text>
                     <Forecast {...forecastInfo} /> 
@@ -50,7 +52,7 @@ const styles = StyleSheet.create({
     box: {
         backgroundColor: 'black',        
         width: '100%',
-        height: 300,
+        height: 310,
         opacity: 0.4,
         alignItems: 'center',
     },
@@ -59,7 +61,7 @@ const styles = StyleSheet.create({
         fontSize: 15,
         color: 'white',
     },
-    Fullscreen:{
-        width: '100%',
-    },
+    // Fullscreen:{
+    //     width: '100%',
+    // },
 })

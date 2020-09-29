@@ -4,14 +4,14 @@ import { StatusBar } from 'expo-status-bar';
 import { View, Text, FlatList, TouchableHighlight, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 const availableZipItems = [
-    { place: 'Hatyai', code: '90110' },
+    { place: 'Songkhla', code: '90000' },
     { place: 'Trang', code: '92000' },
     { place: 'Chiangmai', code: '50000' },
     { place: 'Khonkaen', code: '40000' },
     { place: 'Chonburi', code: '20000' },
     { place: 'Phuket', code: '83000' },
     { place: 'Krabi', code: '81000' },
-    { place: 'Pathum thani', code: '12120' },
+    { place: 'Pathum Thani', code: '12120' },
     
 ]
 const ZipItem = ({ place, code, navigation }) => (
@@ -55,19 +55,18 @@ const styles = StyleSheet.create({
     },
     backdrop: {
         alignItems: 'center',
-        width: '100%',
         height: '100%',
     },
     font: {
         marginTop: 32,
         fontSize: 23,
-        color: 'black',
+        color: '#000000',
     },
     box: {
-        backgroundColor: '#A6FFFB',        
+        backgroundColor: 'white',        
         width: '95%',
         height: '95%',
-        opacity: 0.4,
+        opacity: 0.7,
         alignItems: 'center',
     },
 })
