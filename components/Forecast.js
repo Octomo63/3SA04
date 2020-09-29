@@ -13,6 +13,7 @@ export default function Forecast(props) {
                     <Text style={styles.medium}>°C</Text>
                 </Text>
             </View>
+            <Text style={styles.big}>Wind {props.wind} Meter/Sec</Text>
         </View>
     );
 }
